@@ -6,10 +6,10 @@ def workdays_between(start_date, end_date):
     workdays = 0
     for i in range(delta.days + 1):
         day = start_date + timedelta(days=i)
-        if day.weekday() < 5: # 0=пн, 4=пт, 5=сб, 6=вс
+        if day.weekday() < 5:
             workdays += 1
     return workdays
 
 start = date(2024, 12, 1)
 end = date(2024, 12, 31)
-print(f"Рабочих дней: {workdays_between(start, end)}")
+print(f"Working days: {workdays_between(start, end)}")
